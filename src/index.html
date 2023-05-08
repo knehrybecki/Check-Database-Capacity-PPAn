@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Rozmiar Bazy Danych</title>
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'" />
+  <link href="./style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container" >
+    <div style="text-align: center;">Bazy Danych Na Sklepach</div>
+    <div class="Shops_box" style="display: flex;">
+      <div>Sklepy</div>
+      <div style="margin-right: 40px;">Data</div>
+      <div style="
+        margin-right: 35px;
+    ">Wartość</div>
+
+    </div>
+    <img width="30" height="30" id="reload" title="Przeładuj strone" style='cursor: pointer;' src="icons8-reload-67.png">
+     <img width="30" height="30" id="addFolder" title="Wybierz ścieżkę" style='cursor: pointer;' src="icons8-folder-48.png">
+     <input type="file" id="input-folder"  webkitdirectory style="display: none;">
+
+    <div
+      style="display: flex; justify-content: space-around; align-items: center; flex-direction: column ; width: 100%;">
+      <ul id="Shops">
+
+        <div class="infoStart" style="display:none" >Wybierz ścieżkę do plików ze sklepu<br/><img  style="cursor: pointer;" id="addFolderStart" src="icons8-folder-48.png" ></div>
+        <div class="loader" style="display: none;"></div>
+      </ul>
+      <div class="count" style="display: none;">
+        <div class="countAll">Ilość sklepów:<span id='countShops'></span></div>
+        <div class="countLow"><span id="countLow_number"></span></div>
+        <div class="countMid"><span id="countMid_number"></span></div>
+        <div class="countHig"><span id="countHig_number"></span></div>
+      </div>
+    </div>
+    <div id="error"></div>
+    <div id="copyright">Copyright © 2023 - Kamil Nehrybecki</div>
+    <script  src="./renderer.js"></script>
+
+</body>
+
+</html>

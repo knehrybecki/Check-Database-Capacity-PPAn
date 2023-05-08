@@ -1,0 +1,32 @@
+{
+  "name": "sklepy-ppan-checkdatabase",
+  "version": "1.1.2",
+  "description": "Sprawdzanie rozmiarów baz danych na sklepach",
+  "main": "./src/main.js",
+  "author": "Kamil Nehrybecki",
+  "homepage": "null",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint --ext .js .",
+    "dev": "electron .",
+    "postinstall": "electron-builder install-app-deps",
+    "build:win": "electron-builder --win --config",
+    "build:mac": "electron-builder --mac --config",
+    "build:linux": "electron-builder --linux --config"
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^1.0.3",
+    "@electron-toolkit/utils": "^1.0.2",
+    "electron-updater": "^5.3.0",
+    "win-select-folder": "^1.0.1"
+  },
+  "devDependencies": {
+    "@electron/notarize": "^1.2.3",
+    "electron": "^22.3.4",
+    "electron-builder": "^23.6.0",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.7"
+  }
+}
